@@ -1,0 +1,109 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\arsla\\source\\repos\\PatientTracking.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C808BEF7-2B04-4F38-9752-868BFDC6D8DF}|PatientTracking.API\\PatientTracking.API.csproj|c:\\users\\arsla\\source\\repos\\patienttracking.api\\patienttracking.api\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{C808BEF7-2B04-4F38-9752-868BFDC6D8DF}|PatientTracking.API\\PatientTracking.API.csproj|solutionrelative:patienttracking.api\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB30DE01-0271-49F3-9899-6235A9AED72F}|PatientTracking.Tests\\PatientTracking.Tests.csproj|c:\\users\\arsla\\source\\repos\\patienttracking.api\\patienttracking.tests\\patientservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB30DE01-0271-49F3-9899-6235A9AED72F}|PatientTracking.Tests\\PatientTracking.Tests.csproj|solutionrelative:patienttracking.tests\\patientservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C808BEF7-2B04-4F38-9752-868BFDC6D8DF}|PatientTracking.API\\PatientTracking.API.csproj|c:\\users\\arsla\\source\\repos\\patienttracking.api\\patienttracking.api\\services\\patientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C808BEF7-2B04-4F38-9752-868BFDC6D8DF}|PatientTracking.API\\PatientTracking.API.csproj|solutionrelative:patienttracking.api\\services\\patientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C808BEF7-2B04-4F38-9752-868BFDC6D8DF}|PatientTracking.API\\PatientTracking.API.csproj|c:\\users\\arsla\\source\\repos\\patienttracking.api\\patienttracking.api\\services\\ipatientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C808BEF7-2B04-4F38-9752-868BFDC6D8DF}|PatientTracking.API\\PatientTracking.API.csproj|solutionrelative:patienttracking.api\\services\\ipatientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB30DE01-0271-49F3-9899-6235A9AED72F}|PatientTracking.Tests\\PatientTracking.Tests.csproj|c:\\users\\arsla\\source\\repos\\patienttracking.api\\patienttracking.tests\\patienttracking.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{EB30DE01-0271-49F3-9899-6235A9AED72F}|PatientTracking.Tests\\PatientTracking.Tests.csproj|solutionrelative:patienttracking.tests\\patienttracking.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\arsla\\source\\repos\\PatientTracking.API\\PatientTracking.API\\.gitignore",
+              "RelativeDocumentMoniker": "PatientTracking.API\\.gitignore",
+              "ToolTip": "C:\\Users\\arsla\\source\\repos\\PatientTracking.API\\PatientTracking.API\\.gitignore",
+              "RelativeToolTip": "PatientTracking.API\\.gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-26T15:34:07.649Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IPatientService.cs",
+              "DocumentMoniker": "C:\\Users\\arsla\\source\\repos\\PatientTracking.API\\PatientTracking.API\\Services\\IPatientService.cs",
+              "RelativeDocumentMoniker": "PatientTracking.API\\Services\\IPatientService.cs",
+              "ToolTip": "C:\\Users\\arsla\\source\\repos\\PatientTracking.API\\PatientTracking.API\\Services\\IPatientService.cs",
+              "RelativeToolTip": "PatientTracking.API\\Services\\IPatientService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T15:20:46.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PatientTracking.Tests",
+              "DocumentMoniker": "C:\\Users\\arsla\\source\\repos\\PatientTracking.API\\PatientTracking.Tests\\PatientTracking.Tests.csproj",
+              "RelativeDocumentMoniker": "PatientTracking.Tests\\PatientTracking.Tests.csproj",
+              "ToolTip": "C:\\Users\\arsla\\source\\repos\\PatientTracking.API\\PatientTracking.Tests\\PatientTracking.Tests.csproj",
+              "RelativeToolTip": "PatientTracking.Tests\\PatientTracking.Tests.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-26T15:17:13.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PatientServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\arsla\\source\\repos\\PatientTracking.API\\PatientTracking.Tests\\PatientServiceTests.cs",
+              "RelativeDocumentMoniker": "PatientTracking.Tests\\PatientServiceTests.cs",
+              "ToolTip": "C:\\Users\\arsla\\source\\repos\\PatientTracking.API\\PatientTracking.Tests\\PatientServiceTests.cs",
+              "RelativeToolTip": "PatientTracking.Tests\\PatientServiceTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T15:14:49.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PatientService.cs",
+              "DocumentMoniker": "C:\\Users\\arsla\\source\\repos\\PatientTracking.API\\PatientTracking.API\\Services\\PatientService.cs",
+              "RelativeDocumentMoniker": "PatientTracking.API\\Services\\PatientService.cs",
+              "ToolTip": "C:\\Users\\arsla\\source\\repos\\PatientTracking.API\\PatientTracking.API\\Services\\PatientService.cs",
+              "RelativeToolTip": "PatientTracking.API\\Services\\PatientService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T15:07:00.842Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
