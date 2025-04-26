@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "/18Ot6rZPgfDAzbMJZQpYZlceFI7Jcy8DKQpXwqP4r0=",
+  "Source": "PatientTracking.API",
+  "BasePath": "_content/PatientTracking.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
