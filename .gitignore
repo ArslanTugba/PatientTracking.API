@@ -1,0 +1,13 @@
+﻿bin/
+obj/
+.vs/git rm -r --cached .
+git add .
+git commit -m "Remove accidentally tracked VS files, update .gitignore"
+git push
+
+*.user
+*.suo
+*.dbmdl
+*.pdb
+*.cache
+*.log
