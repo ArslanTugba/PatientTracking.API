@@ -1,31 +1,44 @@
 # PatientTracking.API
 
-## Project Overview
-PatientTracking.API is a simple RESTful Web API application developed to manage patient information.  
-Currently, it uses in-memory data storage. A SQL Server database integration is planned for future versions.
+A RESTful Web API for patient tracking system.
 
-## Technologies Used
-- .NET 8 (ASP.NET Core Web API)
-- Entity Framework Core (planned)
-- xUnit (Unit Testing)
-- Moq (Mock Testing)
-- Git & GitHub
+## Technologies
+- .NET 8
+- Entity Framework Core
+- SQL Server
+- JWT Authentication
+- Swagger/OpenAPI
 
-## Project Features
-- Create, read, update, and delete patient records (CRUD)
-- Layered architecture (Controller, Service, Data, DTO, Models)
-- Basic unit tests with xUnit and Moq
+## Features
+- User registration and login
+- Patient management (CRUD)
+- Medical history tracking
+- Doctor comments
+- AI predictions
 
 ## API Endpoints
-| Method | Route               | Description             |
-| ------ | ------------------- | ----------------------- |
-| GET    | `/api/patient`      | Retrieve all patients   |
-| GET    | `/api/patient/{id}` | Retrieve a patient by ID|
-| POST   | `/api/patient`      | Add a new patient       |
-| PUT    | `/api/patient/{id}` | Update patient details  |
-| DELETE | `/api/patient/{id}` | Delete a patient        |
 
-## Getting Started
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/ArslanTugba/PatientTracking.API.git
+### Authentication
+- `POST /api/auth/register` - Register new user
+- `POST /api/auth/login` - Login and get token
+
+### Patient Operations
+- `GET /api/patient` - List all patients
+- `GET /api/patient/{id}` - Get patient details
+- `POST /api/patient` - Add new patient
+- `PUT /api/patient/{id}` - Update patient
+- `DELETE /api/patient/{id}` - Delete patient
+
+## Setup
+1. Clone the project
+2. Update database connection in `appsettings.json`
+3. Run database migrations: `dotnet ef database update`
+4. Start the application: `dotnet run`
+
+## API Documentation
+Swagger UI: `https://localhost:44341/swagger`
+
+## Security
+- JWT authentication
+- SHA256 password hashing
+- Role-based authorization (planned)

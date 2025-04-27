@@ -10,43 +10,54 @@ namespace PatientTracking.API.Controllers
     {
         private readonly PatientService _patientService;
 
-      
         public PatientController(PatientService patientService)
         {
             _patientService = patientService;
         }
 
-        
         [HttpPost]
         public IActionResult AddPatient([FromBody] Patient patient)
         {
-            if (patient == null)
+            try
             {
-                return BadRequest("Patient data is required");
-            }
+                if (patient == null)
+                {
+                    return BadRequest("Patient data is required");
+                }
 
-            _patientService.AddPatient(patient);  
-            return Ok(patient);  
+                _patientService.AddPatient(patient);
+                return CreatedAtAction(nameof(GetPatient), new { id = patient.Id }, patient);
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
-        
         [HttpGet("{id}")]
         public IActionResult GetPatient(int id)
         {
-            var patient = _patientService.GetPatient(id);
-            if (patient == null)
+            try
             {
-                return NotFound("Patient not found");
-            }
+                var patient = _patientService.GetPatientById(id);
+                if (patient == null)
+                {
+                    return NotFound($"Patient with ID {id} not found");
+                }
 
-            return Ok(patient);  
+                return Ok(patient);
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet]
         public IActionResult GetAllPatients()
         {
             var patients = _patientService.GetAllPatients();
-            return Ok(patients);  
+            return Ok(patients);
         }
 
         [HttpPut("{id}")]
@@ -57,16 +68,16 @@ namespace PatientTracking.API.Controllers
                 return BadRequest("Invalid patient data");
             }
 
-            var existingPatient = _patientService.GetPatient(id);
+            var existingPatient = _patientService.GetPatientById(id);
             if (existingPatient == null)
             {
                 return NotFound("Patient not found");
             }
 
-            // Burada güncelleme yapılır
             existingPatient.Name = updatedPatient.Name;
             existingPatient.Surname = updatedPatient.Surname;
             existingPatient.BirthDate = updatedPatient.BirthDate;
+            existingPatient.Comment = updatedPatient.Comment;
 
             _patientService.UpdatePatient(existingPatient);
 
@@ -76,8 +87,19 @@ namespace PatientTracking.API.Controllers
         [HttpDelete("{id}")]
         public IActionResult DeletePatient(int id)
         {
-            _patientService.DeletePatient(id);
-            return NoContent();  
+            try
+            {
+                _patientService.DeletePatient(id);
+                return NoContent();
+            }
+            catch (InvalidOperationException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

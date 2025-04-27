@@ -3,6 +3,9 @@ using PatientTracking.API.Data;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.OpenApi.Models;
 using PatientTracking.API.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -37,6 +40,21 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
+// JWT Authentication
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+        };
+    });
 
 // Add DbContext for the application
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -44,6 +62,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 );
 
 builder.Services.AddScoped<PatientService>();
+builder.Services.AddScoped<JwtService>();
 
 
 // CORS Policy Configuration
@@ -51,7 +70,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngularClient", policy =>
     {
-        policy.WithOrigins("http://localhost:4200") // Your Angular frontend URL
+        policy.WithOrigins("http://localhost:4200") // Angular frontend URL
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
@@ -72,10 +91,12 @@ if (app.Environment.IsDevelopment())
     });
 }
 
+// Authentication & Authorization
+app.UseAuthentication();
+app.UseAuthorization();
 
 // Default middlewares
 app.UseHttpsRedirection();
-app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
