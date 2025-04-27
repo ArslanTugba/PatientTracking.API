@@ -8,10 +8,33 @@ services:
       SA_PASSWORD: "Your_password123"
       ACCEPT_EULA: "Y"
     ports:
-      - "1433:1433"
+      - "1433:1433" # Host:Container
     volumes:
       - sqlvolume:/var/opt/mssql
     restart: always
 
+  api: # .NET API Service
+    build:
+      context: ./YourApiFolder # Path to your API project folder
+      dockerfile: Dockerfile # Name of your API's Dockerfile (must be "Dockerfile" - no extension)
+    ports:
+      - "5000:80" # Host:Container port mapping (Host port:Container port)
+    depends_on:
+      - sqlserver # API depends on SQL Server
+    environment:
+      # Connection string to the database (adjust to your settings)
+      "ConnectionStrings:DefaultConnection": "Server=sqlserver;Database=YourDatabaseName;User Id=sa;Password=Your_password123;TrustServerCertificate=true"
+    restart: always
+
+  web: # Angular Application Service
+    build:
+      context: ./YourAngularAppFolder # Path to your Angular project folder
+      dockerfile: Dockerfile # Name of your Angular's Dockerfile (must be "Dockerfile" - no extension)
+    ports:
+      - "4200:80" # Host:Container port mapping
+    depends_on:
+      - api # Angular depends on the API
+    restart: always
+
 volumes:
-  sqlvolume:
+  sqlvolume: # Volume for SQL Server data persistence

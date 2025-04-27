@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientTracking.Tests", "PatientTracking.Tests\PatientTracking.Tests.csproj", "{EB30DE01-0271-49F3-9899-6235A9AED72F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientTracking.API", "PatientTracking.API.csproj", "{48DF8C0B-FF05-F29D-F08C-514B02D79843}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientTracking.Tests", "..\PatientTracking.Tests\PatientTracking.Tests.csproj", "{1E11890B-650E-42DB-A974-264657CF5C13}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EB30DE01-0271-49F3-9899-6235A9AED72F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EB30DE01-0271-49F3-9899-6235A9AED72F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EB30DE01-0271-49F3-9899-6235A9AED72F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EB30DE01-0271-49F3-9899-6235A9AED72F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{48DF8C0B-FF05-F29D-F08C-514B02D79843}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{48DF8C0B-FF05-F29D-F08C-514B02D79843}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48DF8C0B-FF05-F29D-F08C-514B02D79843}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48DF8C0B-FF05-F29D-F08C-514B02D79843}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E11890B-650E-42DB-A974-264657CF5C13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E11890B-650E-42DB-A974-264657CF5C13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E11890B-650E-42DB-A974-264657CF5C13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E11890B-650E-42DB-A974-264657CF5C13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

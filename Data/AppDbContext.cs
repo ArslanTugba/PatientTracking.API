@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PatientTracking.API.Models;
 
+
 namespace PatientTracking.API.Data
 {
     public class AppDbContext : DbContext

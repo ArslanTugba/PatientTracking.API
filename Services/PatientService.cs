@@ -24,17 +24,19 @@ namespace PatientTracking.API.Services
      
         public Patient GetPatient(int id)
         {
-            return _context.Patients
-                           .FirstOrDefault(p => p.Id == id);  
+          return _context.Patients.FirstOrDefault(p => p.Id == id);  
         }
 
-        // Tüm hastaları getirir
         public List<Patient> GetAllPatients()
         {
             return _context.Patients.ToList();  
         }
 
-        // Hasta silme işlemi
+        public void UpdatePatient(Patient updatedPatient)
+        {
+            _context.Patients.Update(updatedPatient);
+            _context.SaveChanges();
+        }
         public void DeletePatient(int id)
         {
             var patient = _context.Patients.FirstOrDefault(p => p.Id == id);

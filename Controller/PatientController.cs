@@ -10,13 +10,13 @@ namespace PatientTracking.API.Controllers
     {
         private readonly PatientService _patientService;
 
-        // Constructor Injection
+      
         public PatientController(PatientService patientService)
         {
             _patientService = patientService;
         }
 
-        // POST: api/Patient
+        
         [HttpPost]
         public IActionResult AddPatient([FromBody] Patient patient)
         {
@@ -29,7 +29,7 @@ namespace PatientTracking.API.Controllers
             return Ok(patient);  // Ekleme başarılıysa hastayı geri döneriz
         }
 
-        // GET: api/Patient/{id}
+        
         [HttpGet("{id}")]
         public IActionResult GetPatient(int id)
         {
@@ -42,7 +42,6 @@ namespace PatientTracking.API.Controllers
             return Ok(patient);  
         }
 
-        // GET: api/Patient
         [HttpGet]
         public IActionResult GetAllPatients()
         {
@@ -50,7 +49,30 @@ namespace PatientTracking.API.Controllers
             return Ok(patients);  
         }
 
-        // DELETE: api/Patient/{id}
+        [HttpPut("{id}")]
+        public IActionResult UpdatePatient(int id, [FromBody] Patient updatedPatient)
+        {
+            if (updatedPatient == null || id != updatedPatient.Id)
+            {
+                return BadRequest("Invalid patient data");
+            }
+
+            var existingPatient = _patientService.GetPatient(id);
+            if (existingPatient == null)
+            {
+                return NotFound("Patient not found");
+            }
+
+            // Burada güncelleme yapılır
+            existingPatient.Name = updatedPatient.Name;
+            existingPatient.Surname = updatedPatient.Surname;
+            existingPatient.BirthDate = updatedPatient.BirthDate;
+
+            _patientService.UpdatePatient(existingPatient);
+
+            return Ok(existingPatient);
+        }
+
         [HttpDelete("{id}")]
         public IActionResult DeletePatient(int id)
         {
