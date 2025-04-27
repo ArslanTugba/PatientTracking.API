@@ -5,7 +5,7 @@ VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientTracking.API", "PatientTracking.API.csproj", "{48DF8C0B-FF05-F29D-F08C-514B02D79843}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientTracking.Tests", "..\PatientTracking.Tests - Kopya\PatientTracking.Tests.csproj", "{1786F09D-1838-F7A1-43F6-FFCA6D2293DB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientTracking.Tests", "..\PatientTracking.Tests\PatientTracking.Tests.csproj", "{2A555FFC-A49A-9B60-2727-B0082A7E99F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{48DF8C0B-FF05-F29D-F08C-514B02D79843}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48DF8C0B-FF05-F29D-F08C-514B02D79843}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48DF8C0B-FF05-F29D-F08C-514B02D79843}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1786F09D-1838-F7A1-43F6-FFCA6D2293DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1786F09D-1838-F7A1-43F6-FFCA6D2293DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1786F09D-1838-F7A1-43F6-FFCA6D2293DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1786F09D-1838-F7A1-43F6-FFCA6D2293DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A555FFC-A49A-9B60-2727-B0082A7E99F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A555FFC-A49A-9B60-2727-B0082A7E99F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A555FFC-A49A-9B60-2727-B0082A7E99F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A555FFC-A49A-9B60-2727-B0082A7E99F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
