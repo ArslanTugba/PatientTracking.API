@@ -25,8 +25,8 @@ namespace PatientTracking.API.Controllers
                 return BadRequest("Patient data is required");
             }
 
-            _patientService.AddPatient(patient);  // İşlem burada yapılır
-            return Ok(patient);  // Ekleme başarılıysa hastayı geri döneriz
+            _patientService.AddPatient(patient);  
+            return Ok(patient);  
         }
 
         

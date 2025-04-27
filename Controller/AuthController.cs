@@ -24,7 +24,7 @@ namespace PatientTracking.API.Controllers
                 });
             }
 
-            return Unauthorized(new { message = "Kullanıcı adı veya şifre hatalı" });
+            return Unauthorized(new { message = "Username or password incorrect" });
         }
     }
 }

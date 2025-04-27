@@ -1,13 +1,28 @@
-﻿bin/
+﻿# Build results
+bin/
 obj/
-.vs/git rm -r --cached .
-git add .
-git commit -m "Remove accidentally tracked VS files, update .gitignore"
-git push
+*.dll
+*.exe
 
+# User-specific files
 *.user
 *.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code directory
+.vscode/
+
+# Visual Studio cache files
+.vs/
+.v17/
+slnx.sqlite
+.vsconfig
 *.dbmdl
 *.pdb
 *.cache
+
+# Others
 *.log
+*.DS_Store
+Thumbs.db

@@ -13,7 +13,6 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "PatientTracking API", Version = "v1" });
 
-    // Swagger'da API için Authorization (Bearer Token) ekleyelim
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         In = ParameterLocation.Header,
